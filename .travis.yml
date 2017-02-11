@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+    - docker
+
+install:
+    - docker pull hseeberger/scala-sbt
+
+script:
+    - docker build -t turnierserver/compiler .
